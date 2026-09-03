@@ -1,0 +1,4 @@
+#!/bin/bash
+mkdir -p backups
+tar -cf backups/srcbp_$(date +"%Y%m%d%H%M%S").tar src
+ls -1t backups/*.tar | tail -n +4 | xargs rm -f
